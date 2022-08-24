@@ -1,0 +1,1299 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Medium.eot');
+    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+        url('assets/fonts/SFProDisplay-Medium.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Medium.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Medium.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Heavy.eot');
+    src: local('SF Pro Display Heavy'), local('SFProDisplay-Heavy'),
+        url('assets/fonts/SFProDisplay-Heavy.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Heavy.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Heavy.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Light.eot');
+    src: local('SF Pro Display Light'), local('SFProDisplay-Light'),
+        url('assets/fonts/SFProDisplay-Light.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Light.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Light.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Bold.eot');
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+        url('assets/fonts/SFProDisplay-Bold.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Bold.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Bold.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Black.eot');
+    src: local('SF Pro Display Black'), local('SFProDisplay-Black'),
+        url('assets/fonts/SFProDisplay-Black.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Black.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Black.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Semibold.eot');
+    src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+        url('assets/fonts/SFProDisplay-Semibold.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Semibold.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+        url('assets/fonts/SFProDisplay-Regular.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Regular.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@box-shadow: 0 1.2rem 0.75rem rgba(107, 183, 72, 0.3);
+
+.textall(@weight, @size, @color) {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: @weight;
+    font-size: @size;
+    line-height: 18px;
+    color: @color;
+}
+
+.phone_button {
+    background-image: linear-gradient(to right, rgba(72, 183, 96, 0.95), rgba(107, 183, 72, 0.95)), url(assets/images/stripe_on_button.svg);
+    background-color: rgb(72, 183, 96);
+    background-size: 110%;
+    border: none;
+    border-radius: 20%/70%;
+    text-align: center;
+    .textall(600, 0.875em, #ffffff);
+    box-shadow: @box-shadow;
+}
+
+.logo_tittle__block {
+    margin-bottom: 5vh;
+    margin-left: 1.5%;
+
+    h2 {
+        position: relative;
+        margin: 0 auto;
+        margin-left: 10px;
+        padding: 3% 0 0 1.5%;
+        .textall(900, 0.8 + 5vw, #4f4f4f);
+        line-height: 1em;
+    }
+
+    img {
+        position: absolute;
+        width: 5%;
+        margin: -1vw 0 0 -1vh;
+    }
+}
+
+body {
+    overflow-y: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5%;
+
+    a:hover {
+        color: #ffffff;
+        background-color: rgb(130, 130, 130, 0.2);
+    }
+}
+
+/*Здесь начинаются стили хедера*/
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5%;
+
+    .header_logo {
+        max-width: 100%;
+    }
+
+    .header__menu>.menu__first {
+        color: rgba(79, 79, 79, 1);
+    }
+
+    .header__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        width: 60%;
+
+        .menu__item {
+            margin: 0 2.5%;
+        }
+    }
+
+    .menu__first {
+        padding: 2% 0;
+        background: url(assets/images/Ellipse_home.svg) no-repeat;
+        background-position: left 50% bottom 40%;
+    }
+
+    .header__burger {
+        display: none;
+    }
+
+    .header__buttons {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 203px;
+
+        .phone_button {
+            box-shadow: none;
+        }
+
+        .need_call_button {
+            position: absolute;
+            z-index: 1;
+            margin: 13% 0 0 12.6%;
+            padding: 1.7rem 2.8rem 1.1rem;
+            .textall(400, 0.875em, #ffffff);
+            font-weight: normal;
+            text-align: center;
+            text-decoration: none;
+            background: rgba(75, 99, 80, 1);
+            border: none;
+            border-radius: 0 0 1rem 1rem;
+        }
+
+        .need_call_button:hover {
+            background: rgb(100, 129, 106);
+        }
+    }
+}
+
+a.phone_button {
+    z-index: 3;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+.phone_button:hover {
+    background-image: linear-gradient(to right, rgba(51, 133, 69, 0.95), rgba(76, 131, 51, 0.95)), url(assets/images/stripe_on_button.svg);
+}
+
+.menu__item {
+    text-decoration: none;
+    .textall(400, 0.875em, #828282);
+    font-weight: normal;
+}
+
+/*Здесь начинаются стили для блока "Как с нами работать"*/
+.how_to_work__wrapper {
+    height: 885px;
+    padding: 3% 1% 2% 3%;
+    background: url(assets/images/How_to_work_back.svg) 0 0/cover no-repeat;
+}
+
+.how_to_work_with_us {
+    display: flex;
+    flex-direction: column;
+    /*margin: 1% 0 5% 3%;*/
+    max-width: 100vw;
+    height: 88%;
+    margin-top: 1%;
+
+    .button {
+        align-self: center;
+    }
+
+    .how_to_work__items {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2.5%;
+        height: 79%;
+        width: 90%;
+        margin: 1.5vh 0 0vh 4vw;
+        padding-left: 2%;
+
+        .how_to_work__item {
+            display: grid;
+            grid-template-columns: 25% 65%;
+            grid-template-rows: 100%;
+            max-width: 45%;
+            max-height: 24%;
+            margin: 1vh 2vw 2.5vh 1.2vw;
+
+            img {
+                grid-area: 1/1/2/2;
+                justify-self: end;
+                height: 90%;
+            }
+
+            .how_to_work__text {
+                height: 100%;
+                margin-top: 1%;
+            }
+
+            h5 {
+                grid-area: 1/2/2/3;
+                margin: 1% 0 0 3%;
+                .textall(700, calc(0.9em + 0.6vw), #4f4f4f);
+            }
+
+            p {
+                grid-area: 1/2/2/3;
+                .textall(400, calc(0.75em + 0.19vw), #828282);
+                margin-left: 3%;
+            }
+
+            p.how_to_work__text_mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+/*Здесь заканчиваются стили блока "Как с нами работать"
+
+/*Здесь начинаются стили формы "Контактные данные"*/
+.popup_contact_data {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease 0s;
+}
+
+.popup_contact_data:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_cd_area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_cd_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.contact-data {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 3% 5%;
+    border-radius: 4%/6%;
+    background-color: #fff;
+    transform: scale(1);
+    box-shadow: 0 0 4rem 2rem rgb(180, 187, 182);
+    overflow-y: auto;
+
+    .close_form {
+        position: absolute;
+        margin: 0 0 0 83%;
+        padding: 0.4% 1% 0.6%;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 0.875em;
+        background: #c5c3c3;
+        background-size: 100%;
+        border-radius: 50%;
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+
+    .form-contact__tittle {
+        margin: 0;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.25em;
+        color: rgba(130, 130, 130, 1);
+    }
+
+    p {
+        margin-bottom: 5%;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.125em;
+        color: rgba(189, 189, 189, 1);
+    }
+
+    .field_data {
+        float: left;
+        width: 100%;
+    }
+
+    label {
+        width: 30%;
+        float: left;
+        .textall(600, 1.125em, rgba(130, 130, 130, 1));
+        text-align: left;
+    }
+
+    input {
+        width: 65%;
+        height: 1.5rem;
+        margin-bottom: 2.5%;
+        background: #f2f2f2;
+        border: none;
+        border-bottom: 0.1rem solid rgba(189, 189, 189, 0.7);
+    }
+
+    .field_contacts {
+        clear: both;
+        text-align: right;
+        line-height: 2.5rem;
+    }
+
+    div.field_contacts_last:last-child {
+        line-height: normal;
+    }
+}
+
+.form_button_1 {
+    padding: 1rem 3rem;
+    margin: 5% 5% 0 25%;
+    box-shadow: @box-shadow;
+}
+
+.no_button_call {
+    text-decoration: none;
+    color: rgba(189, 189, 189, 1);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875em;
+}
+
+/*Здесь заканчиваюся стили формы "Контактные данные"*/
+
+/*Общие стили для заголовка блока "Кредитование"*/
+
+.credit {
+    background-image: url(assets/images/Credit.png);
+    background-size: cover;
+    padding: 2% 1% 2% 3%;
+
+    .logo_tittle__block {
+        margin-bottom: 0;
+
+        h2 {
+            position: relative;
+        }
+
+        .rosbank {
+            position: absolute;
+            width: 15%;
+            margin-left: 65vw;
+            margin-top: -6vw;
+        }
+
+        .text {
+            .textall(600, calc(0.4em + 0.6vw), #4F4F4F);
+            width: 35vw;
+            margin-left: 6vw;
+        }
+    }
+}
+
+/*Тут будут медиазапросы для девайсов с шириной 768-1024px и более*/
+
+@media screen and (min-width: 768px) {
+    .header__menu {
+
+        a.phone_button,
+        a.need_call_button {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    form.contact-data {
+        max-width: 65%;
+    }
+
+    input.field_contacts {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /*Agrobot-block styles*/
+    .agro {
+        display: grid;
+        height: 750px;
+        grid-template-columns: 25% 27% 1fr 1fr 1fr;
+        grid-template-rows: 15% 1fr 1fr 1fr 30%;
+        padding-left: 2%;
+        white-space: wrap;
+
+        .texth1 {
+            /* Agrobot */
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+            margin-bottom: 0;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-size: 9vw;
+            color: #4f4f4f;
+
+            span {
+                background: linear-gradient(90deg, #48B760 0%, #6BB748 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+
+        .block {
+            display: grid;
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+            gap: 10%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 15% 1fr;
+
+            .text {
+                /* Это закупочная площадка для сельхозпредприятий */
+                grid-row: 1/2;
+                grid-column: 1 / 3;
+                .textall(500, 18px, #BDBDBD);
+            }
+
+            .text2 {
+                /* Мы создали удобный и бесплатный инструмент поиска выгодных предложений на товары для нужд вашего сельхозпредприятия */
+                grid-row: 2/3;
+                grid-column: 1 / 3;
+                margin: 5% 40% 0 0;
+                .textall(400, 14px, #828282);
+
+            }
+        }
+
+        .block1 {
+            grid-row: 5/6;
+            grid-column: 1/3;
+        }
+
+        .block2 {
+            display: grid;
+            grid-row: 5/6;
+            grid-column: 1 / 3;
+            align-items: center;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: 30% 1fr;
+
+            .bot {
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+
+            .text3 {
+                /* Ваш личный отдел */
+                grid-row: 2/3;
+                grid-column: 2 / 3;
+                margin-right: 5%;
+                margin-left: 5%;
+                .textall(400, 14px, #828282);
+            }
+        }
+
+        .block3 {
+            grid-row: 3 / 4;
+            grid-column: 3/4;
+            align-self: flex-end;
+            justify-self: center;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .block4 {
+            grid-row: 2 / 3;
+            grid-column: 4/5;
+            align-self: flex-end;
+            justify-self: center;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .block5 {
+            grid-row: 1 / 2;
+            grid-column: 5/6;
+            align-self: flex-end;
+            justify-self: center;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .text4 {
+            .textall(500, 18px, #828282);
+        }
+
+        .icon1 {
+            text-align: center;
+        }
+
+        .pic1 {
+            grid-row: 4 / 6;
+            grid-column: 3/4;
+            width: 100%;
+            height: 100%;
+        }
+
+        .pic2 {
+            grid-row: 3/ 6;
+            grid-column: 4 / 5;
+            width: 100%;
+            height: 100%;
+        }
+
+        .pic3 {
+            grid-row: 2 / 6;
+            grid-column: 5 / 6;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /*Credit-block styles*/
+    .credit_item {
+        display: grid;
+        grid-template-rows: 60% 25% 20;
+        grid-template-columns: 25% 15% 1fr 30%;
+
+        .botton {
+            grid-row: 3/4;
+            grid-column: 1/5;
+            text-align: center;
+            padding: 5%;
+        }
+
+        span {
+            color: #48B760
+        }
+
+        .text {
+            grid-row: 1/2;
+            grid-column: 1/5;
+            width: 94%;
+            height: 100%;
+            margin: 0 2%;
+            background: url(assets/images/tractor_desk.svg) 0 0/100% 100% no-repeat;
+            border-radius: 0 20px 20px 0;
+
+            p {
+                justify-self: start;
+                padding: 18% 3% 9%;
+                margin-top: 0;
+                .textall(700, calc(0.25em + 2.8vw), #333333);
+                line-height: 1.1em;
+            }
+        }
+
+        .credit1 {
+            display: grid;
+            margin: 0 0 0 7%;
+            grid-row: 2/3;
+            grid-column: 1/3;
+            grid-template-rows: 20% 30% 30% 20%;
+            grid-template-columns: 60% 1fr;
+            .textall(400, calc(0.875em + 0.15vw), #4F4F4F);
+
+            .cr_text1 {
+                grid-row: 1/2;
+                grid-column: 1/3;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+            }
+
+            .cr_text2 {
+                grid-row: 2/3;
+                grid-column: 1/2;
+                margin-right: 5%;
+            }
+
+            .cr_text3 {
+                grid-row: 2/3;
+                grid-column: 2/3;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+                text-align: center;
+            }
+
+            .cr_text4 {
+                grid-row: 3/4;
+                grid-column: 1/2;
+                padding-right: 5%;
+            }
+
+            .cr_text5 {
+                grid-row: 3/4;
+                grid-column: 2/3;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+                text-align: center;
+            }
+
+            .cr_text6 {
+                grid-row: 4/5;
+                grid-column: 1/3;
+                .textall(400, calc(0.875em + 0.15vw), #BDBDBD);
+            }
+        }
+
+        .credit2 {
+            display: grid;
+            margin: 0 0 0 5%;
+            grid-row: 2/3;
+            grid-column: 3/5;
+            grid-template-rows: repeat(4, 25%);
+            grid-template-columns: 50% 1fr;
+            .textall(400, calc(0.875em + 0.15vw), #4F4F4F);
+
+            p {
+                margin-top: 0;
+            }
+
+            .cr_text1 {
+                grid-row: 1/2;
+                grid-column: 1/3;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+            }
+
+            .cr_text2 {
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+
+            .cr_text3 {
+                grid-row: 2/3;
+                grid-column: 2/3;
+                margin-right: 3%;
+                padding-left: 2%;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+            }
+
+            .cr_text4 {
+                padding-right: 10%;
+                grid-row: 3/4;
+                grid-column: 1/2;
+            }
+
+            .cr_text5 {
+                margin-right: 3%;
+                grid-row: 3/4;
+                grid-column: 2/3;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+            }
+
+            .cr_text6 {
+                padding-right: 10%;
+                grid-row: 4/5;
+                grid-column: 1/2;
+            }
+
+            .cr_text7 {
+                margin-right: 3%;
+                grid-row: 4/5;
+                grid-column: 2/3;
+                .textall(700, calc(0.875em + 0.15vw), #4F4F4F);
+            }
+        }
+    }
+
+    /*Feedback-block stules*/
+    .feedback {
+        height: fit-content;
+        width: 95%;
+        margin-bottom: 5%;
+        padding: 2% 1% 2% 3%;
+    }
+
+    .feedback__items {
+        display: grid;
+        height: 75%;
+        margin-top: 5.5%;
+        gap: 2%;
+        grid-template-columns: 43% 55%;
+        grid-template-rows: 1fr 25%;
+
+        img.bot {
+            grid-area: 2/2/3/3;
+            justify-self: end;
+            width: 15%;
+            padding: 5% 2% 5% 0;
+        }
+
+        form {
+            grid-area: 1/1/3/2;
+        }
+
+        .name,
+        .e-mail,
+        .phone,
+        .msg {
+            height: 40px;
+            width: 87%;
+            padding: 0 0 0 5%;
+            margin: 1% 0 1% 1%;
+            .textall(400, 0.875em, #4F4F4F);
+            background-color: #F2F2F2;
+            border-radius: 34px;
+        }
+
+        textarea {
+            padding-top: 25%;
+            border: none;
+            border-bottom: solid 1px #BDBDBD;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        .msg {
+            height: 40%;
+            padding-top: 3%;
+        }
+
+        .map {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 5%;
+            border-radius: 34px;
+        }
+
+        .block {
+            margin-top: 3%;
+            margin-bottom: 20%;
+
+            .button_feed {
+                grid-row: 1/2;
+                grid-column: 1/2;
+                justify-self: start;
+                padding-left: 3%;
+
+                .phone_button {
+                    padding: 1rem 3.5rem;
+                }
+            }
+        }
+    }
+}
+
+/*стили для товары и услуги*/
+.services_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 5% 3% 5%;
+}
+
+.services_background {
+    background: url(assets/images/backgrounds/product_cards_background.png) 0 0/ cover no-repeat;
+}
+
+.services {
+    display: grid;
+    width: 100%;
+    height: 784px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 10% 65%;
+    grid-template-areas:
+        "topic"
+        "txt"
+        "card";
+
+    .logo_tittle__block {
+        margin-bottom: 7vh;
+    }
+}
+
+.services_header {
+    grid-area: topic;
+    margin-top: 3.5%;
+}
+
+.services_header_name {
+    .textall(900, 72pt, #4F4F4F);
+    line-height: normal;
+}
+
+.services_and_goods_logo {
+    position: relative;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.services_text {
+    display: inline;
+    grid-area: txt;
+    width: 95%;
+    padding-top: 7%;
+    .textall(500, 13.5pt, #828282);
+    line-height: 20pt;
+    text-align: justify;
+}
+
+.services_text_mobile {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .services_cards {
+        display: grid;
+        grid-area: card;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100%;
+        justify-items: center;
+        align-items: start;
+        gap: .5em;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 95%;
+            height: 75%;
+            margin-bottom: 5%;
+            align-self: end;
+            background-color: white;
+            box-shadow: 0px 0px 20px 0px #bbbbbb70;
+            border-radius: 15px;
+
+            .card_button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                min-width: max-content;
+                height: 12%;
+                min-height: max-content;
+                padding-left: 5px;
+                padding-right: 5px;
+                .textall(600, calc(8pt + 0.2vw), #ffffff);
+                text-decoration: none;
+                background-image: linear-gradient(to right, rgba(72, 183, 96, 0.95), rgba(107, 183, 72, 0.95)),
+                    url(assets/images/stripe_on_button.svg);
+                background-size: 110%;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-image: linear-gradient(to right, rgba(51, 133, 69, 0.95), rgba(76, 131, 51, 0.95)),
+                        url(assets//images/stripe_on_button.svg);
+                }
+            }
+
+            .card_icon {
+                min-width: 50px;
+                max-width: 124px;
+            }
+
+            .card_text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card_name {
+                .textall(700, 18pt, #828282);
+                line-height: normal;
+            }
+
+            .explain_line {
+                .textall(500, 10.5pt, #BDBDBD);
+                line-height: 25pt;
+                min-height: 10%;
+                max-height: fit-content;
+                text-align: center;
+            }
+
+            .card_button_mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+/*Our partners-block styles*/
+.partners {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    grid-template-rows: 1fr 18% 1fr 1fr 1fr;
+    gap: 1%;
+    grid-area: patners;
+    width: 95%;
+    height: fit-content;
+    padding: 2% 1% 2% 3%;
+    /*margin-left: 3%;*/
+
+    .logo_tittle__block {
+        margin-bottom: 8%;
+    }
+
+    div.picture {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.partner {
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.partner_text {
+    display: inline;
+    grid-column: 1/5;
+    grid-row: 2/3;
+    padding-left: 1%;
+    .textall(500, calc(0.4em + 1vw), #828282);
+    line-height: 1.2em;
+}
+
+.partner__text_mob {
+    display: none;
+}
+
+.phone_button_1 {
+    width: 100%;
+    text-align: center;
+    .textall(600, 0.875em, #ffffff);
+    background-image: linear-gradient(to right, rgba(72, 183, 96, 0.95), rgba(107, 183, 72, 0.95)), url(assets/images/stripe_on_button.svg);
+    background-color: rgb(72, 183, 96);
+    background-size: 110%;
+    border: none;
+    border-radius: 20%/70%;
+}
+
+.button_1 {
+    grid-column: 1/5;
+    grid-row: 5/6;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3%;
+    width: 100%;
+    height: fit-content;
+    padding: 3% 0px 0px 0px;
+    background: #4F4F4F;
+}
+
+.sec_footer {
+    width: 25%;
+    padding: 0px 3% 3% 3%;
+    color: #ffffff;
+    .textall(400, calc(0.875em + 0.15vw), #828282);
+
+    span {
+        .textall(600, calc(0.875em + 0.15vw), #bdbdbd);
+    }
+
+    a img.pict_5 {
+        width: 8%;
+        margin-top: 2%;
+        padding: 1%;
+    }
+}
+
+.sec_footer_1 {
+    width: 15%;
+    line-height: 2em;
+    color: #ffffff;
+
+    .menu__item_1 {
+        text-decoration: none;
+        .textall(500, calc(1em + 0.15vw), #ffffff);
+    }
+
+    .menu__item_2 {
+        text-decoration: none;
+        .textall(600, calc(0.875em + 0.15vw), #bdbdbd);
+    }
+}
+
+.logo_1 {
+    padding: 0px 0px 40% 0px;
+}
+
+/*style_form_szr*/
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 229, 229, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease 0s;
+}
+
+.wrapper:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_szr_area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_szr_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 46vw;
+    height: 93vh;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px #bbbbbb70;
+    transform: scale(1);
+}
+
+.text_container {
+    display: block;
+    width: 88%;
+    height: 20%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+.close_circle {
+    float: right;
+}
+
+.name_form {
+    .textall(700, 30pt, #828282);
+    line-height: normal;
+}
+
+.text_form {
+    margin-top: 0.5rem;
+    .textall(300, 14pt, #BDBDBD);
+    line-height: 20pt;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 88%;
+    height: 80%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    width: 55%;
+    height: fit-content;
+    margin: 5%;
+}
+
+.select,
+.common_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form_container {
+    .textall(600, 12pt, #828282);
+}
+
+input,
+select {
+    width: 70%;
+    border: none;
+    border-bottom: solid 1px #BDBDBD;
+}
+
+select {
+    color: #4F4F4F;
+}
+
+label {
+    width: 25%;
+}
+
+input {
+    background-color: #f2f2f250;
+    border-radius: 1px;
+}
+
+.line {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.button_send {
+    width: 180px;
+    height: 44px;
+    .textall(600, 0.875em, #ffffff);
+    background-image: linear-gradient(to right, rgba(72, 183, 96, 0.95), rgba(107, 183, 72, 0.95)),
+        url(assets/images/stripe_on_button.svg);
+    background-size: 110%;
+    border-radius: 20%/70%;
+    border: none;
+    box-shadow: 0px 20px 20px rgba(115, 205, 0, 0.3);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .button_send_mobile {
+        display: none;
+    }
+}
+
+.no_button_call {
+    text-decoration: none;
+    .textall(600, 0.875em, rgba(189, 189, 189, 1));
+}
+
+::-webkit-calendar-picker-indicator {
+    width: 15px;
+    color: transparent;
+    background: url(assets/icons/bi_calendar-fill.svg) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+#area::placeholder {
+    text-align: end;
+    .textall(500, 12pt, #BDBDBD);
+}
+
+#area_2::placeholder {
+    text-align: end;
+    .textall(500, 12pt, #BDBDBD);
+}
+
+#product_name,
+#product_name_2 {
+    background-color: #f2f2f2;
+    border-radius: 1px;
+}
+
+.button_send:hover {
+    background-image: linear-gradient(to right, rgba(51, 133, 69, 0.95), rgba(76, 131, 51, 0.95)),
+        url(assets/images/stripe_on_button.svg);
+}
+
+.calendar {
+    position: relative;
+    z-index: 2;
+    width: 3%;
+    float: left;
+}
+
+.calendar+.deliver {
+    padding-left: 20%;
+}
+
+.deliver {
+    width: 45%;
+}
+
+.topbutton {
+    position: fixed;
+    bottom: 75px;
+    right: 5px;
+    width: 60px;
+    height: 30px;
+    padding-top: 10px;
+    .textall(400, 9pt, #ffffff);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background: rgba(175, 175, 175, 0.65);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
